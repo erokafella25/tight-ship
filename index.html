@@ -947,6 +947,7 @@ function SubtaskSection({ taskId, userId, expanded }) {
           onChange={e => setNewTitle(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && addSubtask()}
           placeholder="Add subtask..."
+          autoComplete="off"
         />
         <button className="subtask-add-btn" onClick={addSubtask}>+</button>
       </div>
@@ -2177,6 +2178,7 @@ function App() {
           defaultTier={getDefaultTier()}
           goals={goals}
           tags={userTags}
+          autoComplete="off"
         />
       )}
 
@@ -2195,6 +2197,7 @@ function App() {
           onSave={editTaskFn}
           goals={goals}
           tags={userTags}
+          autoComplete="off"
         />
       )}
     </div>
